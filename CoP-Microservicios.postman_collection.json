@@ -1,0 +1,478 @@
+{
+	"variables": [],
+	"info": {
+		"name": "CoP Microservicios",
+		"_postman_id": "dec1b102-0993-2838-7c06-be4b9b4fa056",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crearNotificacion",
+			"request": {
+				"url": "http://localhost:8082/notification/create",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idType\": \"47\",\r\n  \"title\": \"OPR\",\r\n  \"description\": \"Orden de pago recibida\",\r\n  \"reference\": \"20072230\",\r\n  \"user\": \"USER1\"\r\n}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "findAll",
+			"request": {
+				"url": "http://localhost:8082/notification/findAll",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"request": {
+				"url": "http://localhost:8080/notification/getById",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "57fcea5d909dc8331c39915f",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"url": "http://localhost:8080/notification/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"57fbbbb94dde82227420dc19\",\n    \"idType\": \"92\",\n    \"title\": \"Saldo inferior\",\n    \"description\": \"Saldo inferior a 5000\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteById",
+			"request": {
+				"url": "http://localhost:8080/notification/deleteById",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "57fbbbb94dde82227420dc19",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAll",
+			"request": {
+				"url": "http://localhost:8080/configuracion/deleteAll",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Crear configuración",
+			"request": {
+				"url": "http://localhost:8083/configuration/create",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"referencia\": \"20075243\",\r\n  \"usuario\": \"SGAPNM00\",\r\n  \"tipoAlerta\": \"47\",\r\n  \"activa\": \"true\"\r\n}\r\n"
+				},
+				"description": "Crear configuración"
+			},
+			"response": []
+		},
+		{
+			"name": "Configuración findAll",
+			"request": {
+				"url": "http://localhost:8083/configuration/findAll",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/plain",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Configuración findById",
+			"request": {
+				"url": "http://localhost:8080/configuration/getById?id=5800c09c530adc460c60ffb2",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/plain",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Configuración update",
+			"request": {
+				"url": "http://localhost:8083/configuration/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"referencia\": \"20075243\",\n  \"usuario\": \"SGAPNM01\",\n  \"tipoAlerta\": 47,\n  \"activa\": true\n}"
+				},
+				"description": "Crear configuración"
+			},
+			"response": []
+		},
+		{
+			"name": "Configuración deleteById",
+			"request": {
+				"url": "http://localhost:8080/configuration/deleteById?id=5800c09c530adc460c60ffb2",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/plain",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Configuración deleteAll",
+			"request": {
+				"url": "http://localhost:8083/configuration/deleteAll",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/plain",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Ribbon - findAll",
+			"request": {
+				"url": "http://localhost:8085/ribbon/getAll",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Zuul - findAll",
+			"request": {
+				"url": "http://localhost:8888/mizuul/ribbonnot/findAll",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Zuul - Configuracion findAll",
+			"request": {
+				"url": "http://localhost:8888/mizuul/ribboncfg/findAll",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Notificaciones deleteAll",
+			"request": {
+				"url": "http://localhost:8082/notification/deleteAll",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Notifications - findByReferenceUser",
+			"request": {
+				"url": "http://localhost:8082/notification/findByReferenceUser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "reference",
+							"value": "20072230",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "user",
+							"value": "USER1",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Configuración findByReferenceUser",
+			"request": {
+				"url": "http://localhost:8083/configuration/findByReferenceUser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"referencia\": \"20075243\",\r\n    \"usuario\": \"SGAPNM00\",\r\n    \"tipoAlerta\": 47\r\n}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Zuul - Configuracion findByReferenceUser",
+			"request": {
+				"url": "http://localhost:8888/mizuul/ribboncfg/findByReferenceUser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reference\": \"20072230\",\r\n    \"user\": \"USER1\",\r\n    \"tipoAlerta\": 47\r\n}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Zuul - Notifications findByReferenceUser",
+			"request": {
+				"url": "http://localhost:8888/mizuul/ribbonnot/findByReferenceUser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reference\": \"20072230\",\r\n    \"user\": \"USER1\"\r\n}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Zuul - Configuracion update",
+			"request": {
+				"url": "http://localhost:8888/mizuul/ribboncfg/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"referencia\": \"20072230\",\n  \"usuario\": \"USER1\",\n  \"tipoAlerta\": 47,\n  \"activa\": false\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Zuul - Notification create",
+			"request": {
+				"url": "http://localhost:8888/mizuul/ribbonnot/create",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idType\": \"47\",\r\n  \"title\": \"OPR\",\r\n  \"description\": \"Orden de pago recibida\",\r\n  \"reference\": \"20072230\",\r\n  \"user\": \"USER1\"\r\n}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
